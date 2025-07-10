@@ -1,0 +1,177 @@
+### Get all classrooms
+GET http://localhost:8000/api/classrooms/
+Accept: application/json
+
+###
+
+### Create a new classroom
+POST http://localhost:8000/api/classrooms/
+Content-Type: application/json
+
+{
+  "name": "Iqro 5-6",
+  "description": ""
+}
+
+###
+### Create a new classroom
+delete http://localhost:8000/api/students/7adc6411-5e35-42c2-a2c7-b058419a1333/
+### Get all students
+
+GET http://localhost:8000/api/students/
+Accept: application/json
+
+###
+### Cari siswa dengan nama mengandung "ahmad"
+DELETE http://localhost:8000/api/students/39da68c4-4e3d-4466-8f98-97f89a83481d/
+
+
+
+# data kelas
+[
+  {
+    "id": "8be0d607-dbde-401e-9db0-c3c56a6171ea",
+    "name": "Al_quran",
+    "students": []
+  },
+  {
+    "id": "d17d3110-e460-4bf7-b6aa-7230d2882c77",
+    "name": "Iqro 1-2",
+    "students": []
+  },
+  {
+    "id": "73806cfe-08e7-4f55-8063-189c165df314",
+    "name": "Iqro 3-4",
+    "students": []
+  },
+  {
+    "id": "46c03770-ec3d-47b1-aefe-82b58849d30c",
+    "name": "Iqro 5-6",
+    "students": []
+  }
+]
+### Create a student
+POST http://localhost:8000/api/students/
+Content-Type: application/json
+
+{
+  "name": "micellin sosro",
+  "classroom": "73806cfe-08e7-4f55-8063-189c165df314",
+  "gender": "laki-laki"
+}
+
+###
+# data siswa
+[
+  
+  {
+    "id": "9ebc2a9f-1773-4ea3-8e34-347f6746e631",
+    "name": "Agus",
+    "birth_date": "2017-01-01",
+    "gender": "Laki-laki",
+    "classroom": "7e85e8e0-5547-4baa-83fa-8352f0f8ad2a"
+  },
+  {
+    "id": "39da68c4-4e3d-4466-8f98-97f89a83481d",
+    "name": "joko susilo",
+    "birth_date": "2017-01-01",
+    "gender": "Laki-laki",
+    "classroom": "7e85e8e0-5547-4baa-83fa-8352f0f8ad2a"
+  },
+  {
+    "id": "bb94c899-bc73-4b70-ab1b-e3c42858137b",
+    "name": "sugeng samanta hakiki",
+    "birth_date": "2017-01-01",
+    "gender": "Laki-laki",
+    "classroom": "7e85e8e0-5547-4baa-83fa-8352f0f8ad2a"
+  },
+  {
+    "id": "a8e1b944-b64a-4701-961d-f703116cf423",
+    "name": "jacob mania",
+    "birth_date": "2017-01-01",
+    "gender": "Laki-laki",
+    "classroom": "7e85e8e0-5547-4baa-83fa-8352f0f8ad2a"
+  },
+  {
+    "id": "1165145e-6e69-4918-8721-c52028d28d95",
+    "name": "hambalang jason",
+    "birth_date": "2017-01-01",
+    "gender": "Laki-laki",
+    "classroom": "7e85e8e0-5547-4baa-83fa-8352f0f8ad2a"
+  },
+]
+### Get all attendances
+GET http://localhost:8000/api/attendances/
+Accept: application/json
+
+###
+
+GET http://localhost:8000/api/attendances/today/
+Accept: application/json
+
+
+### Mark attendance (hadir)
+POST http://localhost:8000/api/attendances/today/
+Content-Type: application/json
+
+{
+  "student": "9ebc2a9f-1773-4ea3-8e34-347f6746e631",
+  "status": "hadir",
+  "note": ""
+}
+
+###
+
+### Get all assessment points
+GET http://localhost:8000/api/assessment-points/
+Accept: application/json
+
+###
+
+### Create assessment point (penilaian)
+### Bulk create assessment points
+POST http://localhost:8000/api/assessment-points/
+Content-Type: application/json
+
+[
+  {
+    "name": "kekayaan",
+    "domain" : "emosional"
+  },
+  {
+    "name": "kamajuan",
+    "domain" : "emosional"
+  }
+]
+
+### Create single assessment point
+POST http://localhost:8000/api/assessment-points/
+Content-Type: application/json
+
+{
+  "name": "kabadian"
+}
+
+
+###
+
+### Get all assessment records
+GET http://localhost:8000/api/assessment-records/
+Accept: application/json
+
+###
+
+### Create assessment record (nilai)
+POST http://localhost:8000/api/assessment-records/
+Content-Type: application/json
+
+[
+  {
+  "student": "b5ce1f67-d7af-40fe-8af7-9d0e7c688fdd",
+  "point": "98bf869c-0db7-47e1-819d-783578a12d14",
+  "score": 85
+
+
+}
+]
+
